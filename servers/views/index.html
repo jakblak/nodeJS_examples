@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"/>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Work Notes</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/newnote">New Note</a></li>
+            <li><a href="/discuss">Discuss</a></li>
+          </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center">
+        <br><br>
+          <h1>Virtual Meeting Notes</h1>
+          <p class="lead">This is a list of the last dozen meeting notes that were entered in. </p>
+        </div>
+        </div>
+          <!--<h2>Latest Notes</h2>-->
+          <div class="container">
+            <!--Filter notes list by member name-->
+            <form action="/" method="post">
+              <div class="row clearfix"></div>
+                <div class="col-md-4 column">
+                  <select id="memberName"
+                               name="memberName"
+                               class="form-control">
+                    {% for user in users %}
+                    <option value="{{ user.username }}">{{ user.username }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="col-md-8 column">
+                  <!-- Button -->
+                  <button id="btnFilterNotes"
+                                name="btnFilterNotes"
+                                class="btn btn-primary"
+                                type="submit">Filter Notes...</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div><!-- /.container -->
+      </body>
+    </html>
