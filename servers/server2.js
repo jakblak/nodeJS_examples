@@ -17,9 +17,8 @@ class Server {
   }
 
   start() {
-    app.listen(port, () => {
-    console.log('app listening on port ' + port);
-    });
+    app.listen(port, () =>
+    console.log('app listening on port ' + port));
   }
 
   initViewEngine() {
@@ -38,9 +37,8 @@ class Server {
   }
 
   initRoutes() {
-    app.get('/', (req, res) => {
-    res.render('index.html');
-    });
+    app.get('/', (req, res) =>
+    res.render('index.html'));
   }
 }
 

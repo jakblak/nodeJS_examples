@@ -1,10 +1,10 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const swig = require('swig');
-const port = 8000;
-const app = express();
+var express = require('express');
+var path = require('path');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var swig = require('swig');
+var port = 8000;
+var app = express();
 
 mongoose.connect('mongodb://localhost/meetings');
 
@@ -16,10 +16,10 @@ app.set('view engine', 'html');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
   res.render('index.html');
 });
 
-app.listen(port, () => {
+app.listen(port, function() {
   console.log('app listening on port ' + port);
 });
