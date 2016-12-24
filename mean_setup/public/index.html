@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>MEAN Trello App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css' />
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+   <!-- Polyfill(s) for older browsers -->
+    <script src="lib/shim.min.js"></script>
+
+    <script src="lib/zone.js"></script>
+    <script src="lib/Reflect.js"></script>
+    <script src="lib/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+</head>
+<body>
+
+    <mt-app></mt-app>
+
+<footer>
+    <div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner footer">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Created by <a href="http://jswiz.net" target="_blank">JsWiz</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+    "name": "mean_setup",
+    "version": "1.0.0",
+    "repository": {
+        "url": ""
+    },
+    "license": "MIT",
+    "scripts": {
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "server": "node server.js",
+        "start": "concurrently \"npm run tsc:w\" \"nodemon server.js\""
+    },
+    "dependencies": {
+        "@angular/common": "~2.3.0",
+        "@angular/compiler": "~2.3.0",
+        "@angular/core": "~2.3.0",
+        "@angular/forms": "~2.3.0",
+        "@angular/http": "~2.3.0",
+        "@angular/platform-browser": "~2.3.0",
+        "@angular/platform-browser-dynamic": "~2.3.0",
+        "@angular/router": "~3.3.0",
+        "@angular/upgrade": "2.2.0",
+        "bootstrap": "^4.0.0-alpha.5",
+
+        "angular-in-memory-web-api": "~0.2.1",
+        "systemjs": "0.19.40",
+        "core-js": "^2.4.1",
+        "reflect-metadata": "^0.1.8",
+        "rxjs": "5.0.0-rc.4",
+        "zone.js": "0.7.2",
+
+        "body-parser": "^1.15.2",
+        "compression": "1.6.0",
+        "cookie-parser": "^1.4.3",
+        "connect-mongo": "1.3.2",
+        "csurf": "^1.9.0",
+        "ejs": "2.5.2",
+        "errorhandler": "^1.5.0",
+        "express": "^4.14.0",
+        "express-session": "^1.14.2",
+        "method-override": "2.3.6",
+        "mongoose": "^4.6.8",
+        "morgan": "~1.7.0",
+        "serve-favicon": "~2.3.2"
+    },
+    "devDependencies": {
+        "concurrently": "^3.1.0",
+        "lite-server": "^2.2.2",
+        "typescript": "2.0.10",
+
+        "del": "^2.2.2",
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^2.0.0",
+        "gulp-plumber": "^1.1.0",
+        "gulp-sass": "^2.3.2",
+        "gulp-uglify": "^2.0.0",
+        "run-sequence": "^1.2.2",
+
+        "@types/core-js": "^0.9.34",
+        "@types/node": "^6.0.48"
+    }
+}
