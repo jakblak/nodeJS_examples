@@ -48,9 +48,11 @@ module.exports = function(db) {
 
   // Configure the 'session' middleware
   app.use(session({
+    name: 'sid',
     saveUninitialized: false,
     resave: true,
     secret: "416351*&(^&*FJIAS",
+    // secret: process.env.sessionSecret,
     store: mongoStore
   }));
 
