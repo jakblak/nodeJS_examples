@@ -1,0 +1,49 @@
+{
+  "name": "angular2-socket.io",
+  "version": "1.0.0",
+  "description": "Simple chat app using socket.io, angular 2 and a node.js web server",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@angular/upgrade": "^2.4.9",
+    "@types/socket.io": "^1.4.28",
+    "angular-in-memory-web-api": "~0.2.4",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "express": "^4.13.4",
+    "path": "^0.12.7",
+    "rxjs": "5.0.1",
+    "socket.io": "1.4.5",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10",
+    "@types/node": "^6.0.46",
+    "@types/jasmine": "2.5.36",
+    "@types/socket.io-client": "1.4.29",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "run-sequence": "^1.2.2"
+  },
+  "repository": {}
+}
