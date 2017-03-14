@@ -10,6 +10,6 @@
 
 > **mean_setup** folder
 - basic MEAN starter using gulp
-- Video Walk-Through
+- [Video Walk-Through](https://www.youtube.com/watch?v=x-l12DWwbUo)
 
 
