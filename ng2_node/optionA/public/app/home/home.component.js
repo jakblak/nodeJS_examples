@@ -17,6 +17,12 @@ var HomeComponent = (function () {
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.messages = new Array();
+        this.socket.on('message-received', function (msg) {
+            _this.messages.push(msg);
+            console.log(msg);
+            console.log(_this.messages);
+        });
         this.socket.emit('event1', {
             msg: 'Client to server, can you hear me server?'
         });
@@ -29,6 +35,14 @@ var HomeComponent = (function () {
         this.socket.on('event4', function (data) {
             console.log(data.msg);
         });
+    };
+    HomeComponent.prototype.sendMessage = function () {
+        var message = {
+            text: this.messageText
+        };
+        this.socket.emit('send-message', message);
+        // console.log(message.text);
+        this.messageText = '';
     };
     HomeComponent = __decorate([
         core_1.Component({
